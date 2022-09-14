@@ -13,10 +13,10 @@
     ],
     "require": {
         "php": ">=7.1",
-        "symfony/framework-bundle": "^3.4|^4.3|^5",
-        "symfony/console": "^3.4|^4.3|^5",
-        "symfony/dependency-injection": "^3.4|^4.3|^5",
-        "symfony/property-access": "^3.4|^4.3|^5",
+        "symfony/framework-bundle": "^3.4|^4.3|^5|^6",
+        "symfony/console": "^3.4|^4.3|^5|^6",
+        "symfony/dependency-injection": "^3.4|^4.3|^5|^6",
+        "symfony/property-access": "^3.4|^4.3|^5|^6",
         "pagerfanta/pagerfanta": "^1.0.5|^2.0",
         "psr/log": "^1.0",
         "ruflin/elastica": "^5.3.5|^6.1.1"
@@ -31,12 +31,12 @@
         "jms/serializer-bundle": "^2.4|^3.5",
         "phpunit/phpunit": "^6.5.14",
         "knplabs/knp-components": "^1.2|^2.3",
-        "symfony/expression-language" : "^3.4|^4.3|^5",
-        "symfony/twig-bundle": "^3.4|^4.3|^5",
-        "symfony/serializer": "^3.4|^4.3|^5",
-        "symfony/yaml": "^3.4|^4.3|^5",
+        "symfony/expression-language" : "^3.4|^4.3|^5|^6",
+        "symfony/twig-bundle": "^3.4|^4.3|^5|^6",
+        "symfony/serializer": "^3.4|^4.3|^5|^6",
+        "symfony/yaml": "^3.4|^4.3|^5|^6",
         "friendsofphp/php-cs-fixer": "^2.2",
-        "symfony/web-profiler-bundle": "^3.4|^4.3|^5"
+        "symfony/web-profiler-bundle": "^3.4|^4.3|^5|^6"
     },
     "suggest": {
         "enqueue/elastica-bundle": "The bundle adds extra features to FOSElasticaBundle bundle. Aimed to improve performance."

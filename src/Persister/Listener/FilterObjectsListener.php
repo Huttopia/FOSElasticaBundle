@@ -34,7 +34,7 @@ class FilterObjectsListener implements EventSubscriberInterface
         if (false == empty($options['skip_indexable_check'])) {
             return;
         }
-        
+
         $objects = $event->getObjects();
         $index = $options['indexName'];
         $type = $options['typeName'];
@@ -51,10 +51,7 @@ class FilterObjectsListener implements EventSubscriberInterface
         $event->setObjects($filtered);
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public static function getSubscribedEvents()
+    public static function getSubscribedEvents(): array
     {
         return [Events::PRE_INSERT_OBJECTS => 'filterObjects'];
     }
