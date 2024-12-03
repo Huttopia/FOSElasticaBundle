@@ -84,6 +84,7 @@ class ModelToElasticaAutoTransformer implements ModelToElasticaTransformerInterf
     public function transform($object, array $fields)
     {
         $identifier = $this->propertyAccessor->getValue($object, $this->options['identifier']);
+
         if ($identifier && !is_scalar($identifier)) {
             $identifier = (string) $identifier;
         }
@@ -176,10 +177,11 @@ class ModelToElasticaAutoTransformer implements ModelToElasticaTransformerInterf
 
             $path = isset($mapping['property_path']) ?
                 $mapping['property_path'] :
-                $key;
+                'data['. $key .']';
             if (false === $path) {
                 continue;
             }
+
             $value = $this->propertyAccessor->getValue($object, $path);
 
             if (isset($mapping['type']) && in_array(
