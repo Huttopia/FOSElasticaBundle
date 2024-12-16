@@ -175,9 +175,12 @@ class ModelToElasticaAutoTransformer implements ModelToElasticaTransformerInterf
                 continue;
             }
 
-            $path = isset($mapping['property_path']) ?
-                $mapping['property_path'] :
-                'data['. $key .']';
+            $path = match(true) {
+                isset($mapping['property_path']) => $mapping['property_path'],
+                $object instanceof Document => 'data['. $key .']',
+                default => $key,
+            };
+
             if (false === $path) {
                 continue;
             }
