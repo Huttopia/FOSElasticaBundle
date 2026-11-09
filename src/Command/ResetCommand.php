@@ -38,7 +38,7 @@ class ResetCommand extends Command
         $this->resetter = $resetter;
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->setName('fos:elastica:reset')

@@ -32,7 +32,7 @@ if (Kernel::VERSION_ID >= 50000) {
             $this->logger = $logger;
         }
 
-        public function collect(Request $request, Response $response, \Throwable $exception = null)
+        public function collect(Request $request, Response $response, ?\Throwable $exception = null): void
         {
             $this->data['nb_queries'] = $this->logger->getNbQueries();
             $this->data['queries'] = $this->logger->getQueries();
@@ -80,12 +80,12 @@ if (Kernel::VERSION_ID >= 50000) {
             return $time;
         }
 
-        public function getName()
+        public function getName(): string
         {
             return 'elastica';
         }
 
-        public function reset()
+        public function reset(): void
         {
             $this->logger->reset();
             $this->data = [];

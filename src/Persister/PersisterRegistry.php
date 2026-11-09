@@ -11,10 +11,9 @@
 
 namespace FOS\ElasticaBundle\Persister;
 
-use Symfony\Component\DependencyInjection\ContainerAwareInterface;
-use Symfony\Component\DependencyInjection\ContainerAwareTrait;
+use FOS\ElasticaBundle\DependencyInjection\ContainerAwareTrait;
 
-class PersisterRegistry implements ContainerAwareInterface
+class PersisterRegistry
 {
     use ContainerAwareTrait;
 

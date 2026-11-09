@@ -123,9 +123,9 @@ class ElasticaLogger extends AbstractLogger
     /**
      * {@inheritdoc}
      */
-    public function log($level, $message, array $context = [])
+    public function log($level, $message, array $context = []): void
     {
-        return $this->logger->log($level, $message, $context);
+        $this->logger->log($level, $message, $context);
     }
 
     public function reset()

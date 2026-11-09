@@ -39,7 +39,7 @@ final class ResetTemplatesCommand extends Command
     /**
      * {@inheritdoc}
      */
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->setName('fos:elastica:reset-templates')

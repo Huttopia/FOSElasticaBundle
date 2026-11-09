@@ -26,7 +26,7 @@ class TransformerPass implements CompilerPassInterface
     /**
      * {@inheritdoc}
      */
-    public function process(ContainerBuilder $container)
+    public function process(ContainerBuilder $container): void
     {
         if (!$container->hasDefinition('fos_elastica.elastica_to_model_transformer.collection')) {
             return;

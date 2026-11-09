@@ -36,7 +36,7 @@ class SearchCommand extends Command
         $this->indexManager = $indexManager;
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->setName('fos:elastica:search')

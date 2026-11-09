@@ -93,7 +93,7 @@ class PopulateCommand extends Command
         $this->resetter = $resetter;
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->setName('fos:elastica:populate')
@@ -114,7 +114,7 @@ class PopulateCommand extends Command
         ;
     }
 
-    protected function initialize(InputInterface $input, OutputInterface $output)
+    protected function initialize(InputInterface $input, OutputInterface $output): void
     {
         $this->pagerPersister = $this->pagerPersisterRegistry->getPagerPersister($input->getOption('pager-persister'));
 
