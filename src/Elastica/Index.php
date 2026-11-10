@@ -40,7 +40,7 @@ class Index extends BaseIndex
         return $this->originalName ?: $this->_name;
     }
 
-    public function getType($type)
+    public function getType($type): \Elastica\Type
     {
         if (isset($this->typeCache[$type])) {
             return $this->typeCache[$type];
